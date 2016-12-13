@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>	
+  <head>
+  	<link rel="stylesheet" type="text/css" href="../styles/main.css">
+  </head>
+
+	<div class="modal-body">
+		<md-content layout="column" layout-align="center center">
+
+			<div class="app-content">
+				<form name="searchField" ng-hide="searchField.$submitted"ng-submit="search()">
+					<div ng-show="!isSearching">
+						<md-input-container>
+						  <label>Search for...</label>
+						  <input class="searchField" type="text" ng-model="searchTerm">
+						</md-input-container>
+					</div>
+				<md-progress-circular ng-if="isSearching" md-mode="indeterminate"></md-progress-circular>
+			</div>
+
+			<md-content layout="column" layout-align="center center">
+		      <div class="app-content">
+		          <md-grid-list md-cols="2" md-row-height="fit">
+		            <md-grid-tile>
+		              <md-card ng-repeat="picture in results.data.photos.photo | limitTo:4">
+		                  <img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="" class="md-card-image">
+		              </md-card>
+		           </md-grid-tile>
+		          </md-grid-list>
+		      </div>
+		    </md-content>
+		</md-content>
+		
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-default" type="button" id="cancel" ng-click="close()">Cancel</button>
+	</div>
+
+
+ </html>
