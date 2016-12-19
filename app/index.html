@@ -11,34 +11,23 @@
   <body ng-app="cygniTestApp">
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-
+    <div id="navbar-wrapper">
+      <h>Kitties are awesome!</h>
+      <div id="button-wrapper"> 
+        <ul class="nav navbar-nav">
+          <li class="active">
+              <button  class="btn" ng-controller="MainCtrl" type="button" id="refreshButton" ng-click="refreshPage()">Click to refresh!
+              </button>
+          </li>
+          <li class="active">
+            <button class="btn" ng-controller="NewSearchCtrl" type="button" id="newSearchButton" ng-click="open()">No more kitties!
             </button>
-
-            <a class="navbar-brand" href="#/">Kitties are awesome!</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="MainCtrl">
-
-            <ul class="nav navbar-nav">
-              <li class="active">
-                  <button type="button" id="refreshButton" ng-click="refreshPage()">Click to refresh!
-                  </button>
-              </li>
-              <li class="active">
-                <button ng-controller="NewSearchCtrl" type="button" id="newSearchButton" ng-click="open()">No more kitties!
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
+
 
 
     <md-content layout="column" layout-align="center center">

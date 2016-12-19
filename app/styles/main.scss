@@ -3,50 +3,84 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+h {
+  font-size: 2.5em;
+  display: inline-block;
+  float:left;
+  margin-left: 1em;
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  opacity: 0.85;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+#navbar-wrapper{
+  display: inline-block;
+  position: absolute;
 
-  /* Remove the padding we set earlier */
-  .header {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .header {
-    margin-bottom: 30px;
-  }
+}
+
+#button-wrapper {
+  display: inline-block;
+  margin-left: 32.5em;
+}
+
+.btn {
+  width: auto;
+  height: 4.55em;
+  display:block;
+  margin:auto;
+
+}
+
+#refreshButton {
+   background-color: #80dfff;
+   border: 0.05em solid #4dd2ff;
+   opacity: 0.85;
+   font-size : 1m;
+   outline:none;
+}
+#refreshButton:hover {
+   background-color: #4dd2ff;
+   border: 0.05em solid #1ac6ff;
+}  
+
+#refreshButton:active {
+   background-color: #1ac6ff;
+   border: 0.05em solid #1ac6ff;
+}
+
+#newSearchButton {
+   background-color:#ddccff;
+   border: 0.05em solid #bb99ff;
+   opacity: 0.85;
+   font-size : 1em;
+   outline:none;
+}
+#newSearchButton:hover {
+   background-color: #bb99ff;
+   border: 0.05em solid #9966ff;
+}  
+
+#newSearchButton:active {
+   background-color: #9966ff;
+   border: 0.05em solid #9966ff;
 }
 
 html,body {
   width: 100%;
   height: 100%;
   margin: 0px;
+  background-color: #e0ebeb;
+
 }
 
 .app-content{
     background-color:#ccc;
     position:absolute;
     width:100%;
-    top:6%;
+    top:6.5%;
     left:0em;
     z-index:1000;
+    border-top: 0.25em solid black;
 }
 
 .md-card-image {
